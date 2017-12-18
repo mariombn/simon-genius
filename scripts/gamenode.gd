@@ -35,6 +35,8 @@ func _ready():
 		count += 1
 
 func gameOver():
+	estado = WAITING
+	eneableButtons(false)
 	lblFeedback.set_text("Game Over!")
 	global.saveRecord(pontos)
 	get_node("resetGame").start()
